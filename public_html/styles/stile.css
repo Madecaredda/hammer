@@ -1,0 +1,33 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : May 24, 2015, 4:22:08 PM
+    Author     : Matteo
+*/
+*{font-family: "verdana","Times New Roman",Times,serif;}
+
+/*#testata{background: orange;}*/
+#testata{background-image: url('img/tst2.jpg'); background-repeat: no-repeat;
+background-position: left; background-size: contain;}
+
+/*colore piè pagina*/
+#coda{background: orange;}
+
+/*colore dei bottoni quando ci si passa sopra il puntatore*/
+.btn:hover{background: #ffcc33;}
+
+/*Stile dei bottoni*/
+.btn {
+ outline: none;
+ cursor: pointer;
+ text-align: center;
+ text-decoration: none;
+ font: bold 20px Arial, Helvetica, sans-serif;
+ color: black;
+ border: solid 1px #0076a3;
+ background: orange;
+}
+
