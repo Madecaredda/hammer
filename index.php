@@ -22,9 +22,9 @@ and open the template in the editor.
         <header id="testata">
         </header>
         <nav id="sidebar">
-            <a class="menu-link" id="bottone1" href="pagina1.php">
+            <a class="menu-link" id="bottone1" href="loginPage.php">
                 <button type="button" class="btn">
-                    Prova
+                    Login
                 </button>
             </a>
    
