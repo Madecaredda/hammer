@@ -1,7 +1,16 @@
 <?php
     session_start();
+    
+    include 'Accesso.php';
+    $database=new mysqli();
+    $database->connect(Accesso::$db_host,  Accesso::$db_user, Accesso::$db_pass, Accesso::$db_name);
+    if($database->connect_errno != 0){
+    error_log("Errore in connesione al database del server \n $database->connect_errno:$database->connect_error");
+    echo "Errore in connesione al database del server \n $database->connect_errno:$database->connect_error";
+    }
+    
     if(isset($_REQUEST["login"])&& isset($_REQUEST["user"])&& isset($_REQUEST["pass"])){
-        if(login($_REQUEST["user"], $_REQUEST["pass"])){
+        if(login($_REQUEST["user"], $_REQUEST["pass"],$database)!=false){
             $_SESSION["loggedIn"]=true;
         }
     }
@@ -10,9 +19,13 @@
     }
     
 
-    function login($user, $pass){
-        if($user== "prova" && $pass== "1234"){
-            return true;
+    function login($user, $pass, $database){
+        $query= "SELECT user,password,status FROM user";
+        $result=$database->query($query);
+        while($row = $result->fetch_object()){
+            if($row->user == $user && $row->password==$pass){
+                return $row->status;
+            }
         }
         return false;
     }
