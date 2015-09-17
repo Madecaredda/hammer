@@ -9,6 +9,8 @@ and open the template in the editor.
 */
 *{font-family: "verdana","Times New Roman",Times,serif;}
 
+#username{border-style: solid; border-color: #ffcc33;}
+
 /*#testata{background: orange;}*/
 #testata{background-image: url('img/tst2.jpg'); background-repeat: no-repeat;
 background-position: left; background-size: contain;}

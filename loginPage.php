@@ -3,18 +3,23 @@
     
     include 'Accesso.php';
     $database=new mysqli();
-    $database->connect(Accesso::$db_host,  Accesso::$db_user, Accesso::$db_pass, Accesso::$db_name);
+    $database->connect(Accesso::$db_host,  Accesso::$db_user, Accesso::$db_pass, Accesso::$db_nameUsers);
     if($database->connect_errno != 0){
     error_log("Errore in connesione al database del server \n $database->connect_errno:$database->connect_error");
     echo "Errore in connesione al database del server \n $database->connect_errno:$database->connect_error";
     }
     
     if(isset($_REQUEST["login"])&& isset($_REQUEST["user"])&& isset($_REQUEST["pass"])){
-        if(login($_REQUEST["user"], $_REQUEST["pass"],$database)!=false){
+        $user=$_REQUEST["user"];
+        $pass=$_REQUEST["pass"];
+        if(login($user,$pass,$database)!=false){
             $_SESSION["loggedIn"]=true;
+            
         }
     }
     else if(isset($_REQUEST["logout"])){
+        $queryLogUpdate= "UPDATE user SET logged=false WHERE logged=true";
+        $result=$database->query($queryLogUpdate);
         logout();
     }
     
@@ -24,6 +29,8 @@
         $result=$database->query($query);
         while($row = $result->fetch_object()){
             if($row->user == $user && $row->password==$pass){
+                $queryLogUpdate= "UPDATE user SET logged=true WHERE user='$user'";
+                $result=$database->query($queryLogUpdate);
                 return $row->status;
             }
         }
@@ -48,7 +55,7 @@ and open the template in the editor.
 -->
 <html id="fullpage">
     <head>
-        <title>Pagina 1</title>
+        <title>C.A. Login</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="styles/stile.css" media="screen">
@@ -69,8 +76,8 @@ and open the template in the editor.
             <?php
             if(isset($_SESSION["loggedIn"]) && $_SESSION["loggedIn"]){
             ?>
-                <h1 class="title">Bentornato</h1>
-                <p class="content">Sei già loggato</p>
+                <h1 class="title">Welcome back</h1>
+                <p class="content">Sei loggato, clicca qui per uscire</p>
                 <form action="loginPage.php" method="post">
                     <input type="submit" name="logout" value="Logout"/>
                 </form>
