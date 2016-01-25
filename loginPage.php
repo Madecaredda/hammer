@@ -64,15 +64,28 @@ and open the template in the editor.
     </head>
     <body id="body">
         <header id="testata">
+            
         </header>
         <nav id="sidebar">
             <a class="menu-link" href="index.php">
                 <button type="button" class="btn">
-                    Indietro
+                    Home
+                </button>
+            </a>
+   
+            <a class="menu-link" href="gallery.php">
+                <button type="button" class="btn">
+                    Galleria
+                </button>
+            </a>
+            <a class="menu-link" href="loginPage.php">
+                <button type="button" class="btn">
+                    Account
                 </button>
             </a>
         </nav>
         <article id="contenuto">
+            <p id="divisor">  </p>
             <?php
             if(isset($_SESSION["loggedIn"]) && $_SESSION["loggedIn"]){
             ?>

@@ -26,6 +26,14 @@ and open the template in the editor.
         <link rel="stylesheet" type="text/css" href="styles/dimensione.css" media="screen">
     </head>
     <body id="body">
+        <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/it_IT/sdk.js#xfbml=1&version=v2.5";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
         <header id="testata">
             <p id="username">
                 <a href="loginPage.php">
@@ -44,9 +52,9 @@ and open the template in the editor.
             
         </header>
         <nav id="sidebar">
-            <a class="menu-link" href="#">
+            <a class="menu-link" href="index.php">
                 <button type="button" class="btn">
-                    VUOTO
+                    Home
                 </button>
             </a>
    
@@ -57,14 +65,19 @@ and open the template in the editor.
             </a>
             <a class="menu-link" href="loginPage.php">
                 <button type="button" class="btn">
-                    Account(DA FARE)
+                    Account
                 </button>
             </a>
         </nav>
             <article id="contenuto">
+                <p id="divisor">  </p>
                 <h1 class="title">Home</h1>
+                
                 <p class="content" id="content1">
                     In fase di implementazione la galleria
+                </p>
+                <p>
+                <div class="fb-page" data-href="https://www.facebook.com/simona.cincidda/" data-tabs="timeline" data-width="500" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/simona.cincidda/"><a href="https://www.facebook.com/simona.cincidda/">C.A.  Lavorazione Legno Srl</a></blockquote></div></div>
                 </p>
             </article>
         <div id="clear"></div>

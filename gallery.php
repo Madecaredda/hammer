@@ -18,9 +18,11 @@ echo "Errore in connesione al database del server \n $database->connect_errno:$d
         <link rel="stylesheet" type="text/css" href="styles/stile.css" media="screen">
         <link rel="stylesheet" type="text/css" href="styles/posizionamento.css" media="screen">
         <link rel="stylesheet" type="text/css" href="styles/dimensione.css" media="screen">
+        
     </head>
     <body id="body">
         <header id="testata">
+            
             <p id="username">
                 <a href="loginPage.php">
                     <?php 
@@ -39,10 +41,22 @@ echo "Errore in connesione al database del server \n $database->connect_errno:$d
         <nav id="sidebar">
             <a class="menu-link" href="index.php">
                 <button type="button" class="btn">
-                    Indietro
+                    Home
+                </button>
+            </a>
+   
+            <a class="menu-link" href="index.php">
+                <button type="button" class="btn">
+                    Galleria
+                </button>
+            </a>
+            <a class="menu-link" href="loginPage.php">
+                <button type="button" class="btn">
+                    Account
                 </button>
             </a>
         </nav>
+        <p id="divisor">  </p>
         <div id="clear"></div>
         <footer id="coda">
         </footer>
