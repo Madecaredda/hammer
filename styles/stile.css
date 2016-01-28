@@ -12,11 +12,17 @@ and open the template in the editor.
 #username{border-style: solid; border-color: #ffcc33;}
 
 /*#testata{background: orange;}*/
-#testata{background-image: url('img/tst2.jpg'); background-repeat: no-repeat;
-background-position: left; background-size: contain;}
+#testata{
+    background-image: url('img/tst2.jpg'); 
+    background-repeat: no-repeat;
+    background-position: left; 
+    background-size: contain;
+}
 
 /*colore piè pagina*/
-#coda{background: orange;}
+#coda{
+    background: orange;
+}
 
 /*colore dei bottoni quando ci si passa sopra il puntatore*/
 .btn:hover{background: #ffcc33;}
@@ -35,4 +41,19 @@ background-position: left; background-size: contain;}
 
 /*divisore*/
 #divisor{background: orange;}
+
+.imago_thumbImg {border: #111;}
+
+/*.imago_selectedThumb {border: #111;}*/
+
+/*#sideBarMenu {background: #ffcc33;}*/
+
+/*#sideBarContent {background: #ffcc33;}*/
+
+.sideBarTabClosed {background: #111 url('img/open.png') no-repeat center center;}
+
+.sideBarTabOpen {background: #111 url('img/close.png') no-repeat center center;}
+
+#imagoCurrentImg {border: #ffcc33;}
+    
 

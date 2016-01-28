@@ -18,6 +18,33 @@ echo "Errore in connesione al database del server \n $database->connect_errno:$d
         <link rel="stylesheet" type="text/css" href="styles/stile.css" media="screen">
         <link rel="stylesheet" type="text/css" href="styles/posizionamento.css" media="screen">
         <link rel="stylesheet" type="text/css" href="styles/dimensione.css" media="screen">
+        <!--<link rel="stylesheet" href="gallery/css/reset.css" type="text/css" />-->
+        <!--<link rel="stylesheet" href="gallery/css/imago.css" type="text/css" />-->
+       
+        
+        <script src="gallery/js/mootools-1.2.4-core_imago.js" type="text/javascript">
+        </script>
+        <script src="gallery/js/mootools-1.2.4.2-more.js" type="text/javascript">
+        </script>
+        <script src="gallery/js/slider.js" type="text/javascript">
+        </script>
+        <script src="gallery/js/imago-nc.js" type="text/javascript">
+        </script>
+        <script type="text/javascript">
+
+            
+            var gallery;
+            function start(){
+                gallery = new Gallery();
+                gallery.loader = new GalleryLoader('gallery.xml', 'images', "Madeira");
+                
+                gallery.loader.load();
+            }
+            
+            window.addEvent('domready', function(){
+                start();
+            });			
+        </script>
         
     </head>
     <body id="body">
@@ -57,6 +84,37 @@ echo "Errore in connesione al database del server \n $database->connect_errno:$d
             </a>
         </nav>
         <p id="divisor">  </p>
+        
+        
+        
+        
+        
+        <div id="sideBarContent">
+            
+            
+        </div>
+        <h3 id="imagoGalleryTitle"></h3>
+				<a id="imagoMenuPrevLink"><img src="css/img/menuPrevImg.png" alt=""/></a>
+				<a id="imagoMenuNextLink"><img src="css/img/menuNextImg.png" alt=""/></a>
+			</div>
+            <a href="#" id="sideBarTab" class="sideBarTabClosed"></a>
+        </div>
+        <div id="imagoFrame">
+            <a id="imagoPreviousImageLink"></a>
+            <img src="css/img/emptyX.gif" alt="" id="imagoCurrentImg"/><a id="imagoNextImageLink"></a>
+            <h3 id="imagoCurrentImageTitle">The gallery is loading...</h3>
+            <div id="imagoCurrentImageLoading">
+            </div>
+			
+			<div id="imagoLoading">
+            </div>
+        </div>
+        <div class="msg">
+            <span id="imagoError">I am the error shown to the user</span>
+        </div>
+            
+            
+            
         <div id="clear"></div>
         <footer id="coda">
         </footer>

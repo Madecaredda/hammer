@@ -7,10 +7,56 @@ and open the template in the editor.
     Created on : May 26, 2015, 5:24:19 PM
     Author     : Matteo
 */
-#username{float: right; float: top; display: inline-block;}
-.title{display: inherit}
-ul {list-style-type: none; display: block; }
-.btn{float: left; display: inline-block;}
-#coda{position: fixed; bottom: 0px;}
-.content{display: inline;}
-.fb-page{float: right;}
+#username{
+    float: right; 
+    float: top; 
+    display: inline-block;
+}
+
+.title{
+    display: inherit
+}
+
+ul {
+    list-style-type: none; 
+    display: block; 
+}
+
+.btn{
+    float: left; 
+    display: inline-block;
+}
+
+#coda{
+    position: fixed; 
+    bottom: 0px;
+}
+
+.content{
+    display: inline;
+}
+
+.fb-page{
+    float: right;
+}
+
+#imagoGalleryTitle {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 50px;
+    text-align: center;
+    font-size: larger;
+    font-weight: bold;
+    font-family: inherit;
+    color: #111;
+    display: inline-block;
+}
+
+
+#imagoCurrentThumbTable {
+    border-collapse: separate;
+    border-spacing: 5px;
+    margin: 5px;
+    padding: 5px;
+    outline: 5px;
+}
