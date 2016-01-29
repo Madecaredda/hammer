@@ -84,31 +84,20 @@ echo "Errore in connesione al database del server \n $database->connect_errno:$d
             </a>
         </nav>
         <p id="divisor">  </p>
-        
-        
-        
-        
-        
-        <div id="sideBarContent">
-            
-            
-        </div>
+    
         <h3 id="imagoGalleryTitle"></h3>
-				<a id="imagoMenuPrevLink"><img src="css/img/menuPrevImg.png" alt=""/></a>
-				<a id="imagoMenuNextLink"><img src="css/img/menuNextImg.png" alt=""/></a>
-			</div>
+        
+            <a id="imagoMenuPrevLink"><img src="styles/img/menuPrevImg.png" alt=""/></a>
+            <a id="imagoMenuNextLink"><img src="styles/img/menuNextImg.png" alt=""/></a>
             <a href="#" id="sideBarTab" class="sideBarTabClosed"></a>
-        </div>
-        <div id="imagoFrame">
-            <a id="imagoPreviousImageLink"></a>
-            <img src="css/img/emptyX.gif" alt="" id="imagoCurrentImg"/><a id="imagoNextImageLink"></a>
-            <h3 id="imagoCurrentImageTitle">The gallery is loading...</h3>
-            <div id="imagoCurrentImageLoading">
+            <div id="imagoFrame">
+                <a id="imagoPreviousImageLink"></a>
+                <img src="css/img/emptyX.gif" alt="" id="imagoCurrentImg"/><a id="imagoNextImageLink"></a>
+                <h3 id="imagoCurrentImageTitle">The gallery is loading...</h3>
+                <div id="imagoCurrentImageLoading"></div>
+                <div id="imagoLoading"></div>
             </div>
-			
-			<div id="imagoLoading">
-            </div>
-        </div>
+        
         <div class="msg">
             <span id="imagoError">I am the error shown to the user</span>
         </div>

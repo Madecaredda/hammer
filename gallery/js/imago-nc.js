@@ -1,13 +1,3 @@
-/*
- *  Copyright 2006 - 2011 by Jens Boje
- *  Name    : Imago 
- *  Version : 0.9
- *  Author  : Jens Boje (azarai@codeboje.de)
-              http://codeboje.de/contact/
-	License:
-			The Imago code is available under the AGPL or a Commercial license (Contact author)
-*/
-
 var GalleryImage = new Class({
     initialize: function(fileName, title, thumbURL, imageURL){
         this.fileName = fileName;
@@ -35,8 +25,8 @@ var GalleryImage = new Class({
 var Gallery = new Class({
     initialize: function(){
         this.prefetching = null;
-        this.thumbnailColumns = "3";
-        this.thumbnailRows = "3";
+        this.thumbnailColumns = "10";
+        this.thumbnailRows = "1";
         this.images = new Array();
         
         this.lastThumbImageIndex = 0;
