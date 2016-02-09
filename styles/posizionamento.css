@@ -13,6 +13,18 @@ and open the template in the editor.
     display: inline-block;
 }
 
+#loginform{
+    padding-left: 5%;
+}
+
+#fulcrohome{
+    margin-left: 300px;
+}
+
+#username{
+    margin-right: 5%;
+}
+
 .title{
     display: inherit
 }
@@ -27,6 +39,11 @@ ul {
     display: inline-block;
 }
 
+.btncurrent{
+    float: left; 
+    display: inline-block;
+}
+
 #coda{
     position: fixed; 
     bottom: 0px;
@@ -37,7 +54,7 @@ ul {
 }
 
 .fb-page{
-    float: right;
+    float: left;
 }
 
 #imagoGalleryTitle {

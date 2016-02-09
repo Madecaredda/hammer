@@ -7,9 +7,22 @@ and open the template in the editor.
     Created on : May 24, 2015, 4:22:08 PM
     Author     : Matteo
 */
-*{font-family: "verdana","Times New Roman",Times,serif;}
+*{font-family: "Georgia","Verdana",Times,serif;}
 
 #username{border-style: solid; border-color: orange;}
+
+#fulcrohome{
+    //border-style: solid;
+    //border-color: red;
+}
+
+#prova{
+   // border-style: solid;
+   // border-color: red;
+    background-image: url('img/home2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
 /*#testata{background: orange;}*/
 #testata{
@@ -37,6 +50,17 @@ and open the template in the editor.
  color: black;
  border: solid 1px #0076a3;
  background: orange;
+}
+
+.btncurrent {
+ outline: none;
+ cursor: pointer;
+ text-align: center;
+ text-decoration: none;
+ font: bold 20px Arial, Helvetica, sans-serif;
+ color: black;
+ border: solid 1px #0076a3;
+ background: #ffcc33;
 }
 
 /*divisore*/

@@ -79,7 +79,7 @@ and open the template in the editor.
                 </button>
             </a>
             <a class="menu-link" href="loginPage.php">
-                <button type="button" class="btn">
+                <button type="button" class="btncurrent">
                     Account
                 </button>
             </a>
@@ -89,17 +89,17 @@ and open the template in the editor.
             <?php
             if(isset($_SESSION["loggedIn"]) && $_SESSION["loggedIn"]){
             ?>
-                <h1 class="title">Welcome back</h1>
-                <p class="content">Sei loggato, clicca qui per uscire</p>
-                <form action="loginPage.php" method="post">
+                <h1 class="title" id="loginform">Welcome back</h1>
+                <p class="content" id="loginform">Sei loggato, clicca qui per uscire</p>
+                <form action="loginPage.php" method="post" id="loginform">
                     <input type="submit" name="logout" value="Logout"/>
                 </form>
             <?php
             } else {
             ?>
-                <h1 class="title">Benvenuto</h1>
-                <p class="content">Inserisci username e password</p>
-                <form action="loginPage.php" method="post">
+                <h1 class="title" id="loginform">Benvenuto</h1>
+                <p class="content" id="loginform">Inserisci username e password</p>
+                <form action="loginPage.php" method="post" id="loginform">
                     <label for="user">Username</label>
                     <input type="text" name="user" id="user"/>
                     <br/>

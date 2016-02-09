@@ -36,7 +36,7 @@ echo "Errore in connesione al database del server \n $database->connect_errno:$d
             var gallery;
             function start(){
                 gallery = new Gallery();
-                gallery.loader = new GalleryLoader('gallery.xml', 'images', "Madeira");
+                gallery.loader = new GalleryLoader('gallery.xml', 'images', "Porte");
                 
                 gallery.loader.load();
             }
@@ -73,7 +73,7 @@ echo "Errore in connesione al database del server \n $database->connect_errno:$d
             </a>
    
             <a class="menu-link" href="index.php">
-                <button type="button" class="btn">
+                <button type="button" class="btncurrent">
                     Galleria
                 </button>
             </a>
@@ -99,7 +99,7 @@ echo "Errore in connesione al database del server \n $database->connect_errno:$d
             </div>
         
         <div class="msg">
-            <span id="imagoError">I am the error shown to the user</span>
+            <span id="imagoError">Errore nel caricamento delle immagini</span>
         </div>
             
             

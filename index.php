@@ -16,7 +16,7 @@ and open the template in the editor.
 -->
 <html id="fullpage">
     <head>
-        <title>C.A. homepage</title>
+        <title>C.A. Homepage</title>
         <script type="text/javascript" src="lib/jquery-1.11.3.min.js"></script>
         
         <meta charset="UTF-8">
@@ -53,7 +53,7 @@ and open the template in the editor.
         </header>
         <nav id="sidebar">
             <a class="menu-link" href="index.php">
-                <button type="button" class="btn">
+                <button type="button" class="btncurrent">
                     Home
                 </button>
             </a>
@@ -71,14 +71,19 @@ and open the template in the editor.
         </nav>
             <article id="contenuto">
                 <p id="divisor">  </p>
-                <h1 class="title">Home</h1>
-                
-                <p class="content" id="content1">
-                    In fase di implementazione la galleria
-                </p>
                 <p>
-                <div class="fb-page" data-href="https://www.facebook.com/simona.cincidda/" data-tabs="timeline" data-width="500" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/simona.cincidda/"><a href="https://www.facebook.com/simona.cincidda/">C.A.  Lavorazione Legno Srl</a></blockquote></div></div>
-                </p>
+                    <div class="fb-page" data-href="https://www.facebook.com/simona.cincidda/" data-tabs="timeline" data-width="500" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/simona.cincidda/"><a href="https://www.facebook.com/simona.cincidda/">C.A.  Lavorazione Legno Srl</a></blockquote></div></div>
+                    </p>
+                <div id="fulcrohome">
+                    <p id="prova">
+                        prova
+                    </p>
+                    <h1> Le mani degli artigiani, a Vostra disposizione </h1>
+                    <p class="content" id="content1">
+                        Realizzazione e montaggio di infissi interni e esterni in legno, alluminio o PVC. 
+                    </p>
+                    
+                </div>
             </article>
         <div id="clear"></div>
         <footer id="coda">
