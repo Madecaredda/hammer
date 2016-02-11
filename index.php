@@ -68,6 +68,16 @@ and open the template in the editor.
                     Account
                 </button>
             </a>
+            <?php
+            $query="SELECT user FROM user WHERE logged=true AND status=1";
+                    $result=$database->query($query);
+                    $row=$result->fetch_row();
+                    if($row[0]!=null){ ?>
+            <a class="menu-link" href="modifica.php">
+                <button type="button" class="btn">
+                    Modifica Questa Pagina
+                </button>
+            </a><?php } ?>
         </nav>
             <article id="contenuto">
                 <p id="divisor">  </p>
@@ -75,9 +85,7 @@ and open the template in the editor.
                     <div class="fb-page" data-href="https://www.facebook.com/simona.cincidda/" data-tabs="timeline" data-width="500" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/simona.cincidda/"><a href="https://www.facebook.com/simona.cincidda/">C.A.  Lavorazione Legno Srl</a></blockquote></div></div>
                     </p>
                 <div id="fulcrohome">
-                    <p id="prova">
-                        prova
-                    </p>
+                    <p id="prova"></p>
                     <h1> Le mani degli artigiani, a Vostra disposizione </h1>
                     <p class="content" id="content1">
                         Realizzazione e montaggio di infissi interni e esterni in legno, alluminio o PVC. 
