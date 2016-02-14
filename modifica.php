@@ -19,8 +19,8 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
 <html id="fullpage">
-    <head id="sparita">
-        <title>C.A. Homepage</title>
+    <head>
+        <title>modifica la home</title>
         <script type="text/javascript" src="lib/jquery-1.11.3.min.js"></script>
         
         <meta charset="UTF-8">
@@ -29,7 +29,7 @@ and open the template in the editor.
         <link rel="stylesheet" type="text/css" href="styles/posizionamento.css" media="screen">
         <link rel="stylesheet" type="text/css" href="styles/dimensione.css" media="screen">
     </head>
-    <body id="paddare">
+    <body id="body">
         <header id="testata">
             <p id="username">
                 <a href="loginPage.php">
@@ -47,40 +47,28 @@ and open the template in the editor.
             </p>
         </header>
         <p>
-        <form name="form1" method="post" action="modificaTitolo.php">
-            <textarea name="Nuovo" class="editabile">
-            <?php
-                echo file_get_contents('titolo.txt'); 
-            ?>
-            </textarea>
-            <input type="submit" name="submit" value="Modifica Titolo">
+            <form id="paddare" name="form1" method="post" action="modificaTitolo.php" >
+                <textarea name="Nuovo" class="editabile" rows="2" cols="70" >
+                <?php
+                    echo file_get_contents('titolo.txt'); 
+                ?>
+                </textarea>
+                <input type="submit" name="submit" value="Modifica Titolo">
 
             </form>
 
-            <h1>Contenuto attuale</h1>
-            <?php
-                echo file_get_contents('titolo.txt');
-            ?>
-        </p>
-
-        <p>
-            <form name="form2" method="post" action="modificaTesto.php">
-            <textarea name="Nuovo" class="editabile">
-            <?php
-                echo file_get_contents('testo.txt'); 
-            ?>
-            </textarea>
-            <input type="submit" name="submit" value="Modifica testo">
+            <form id="paddare" name="form2" method="post" action="modificaTesto.php">
+                <textarea name="Nuovo" class="editabile" rows="2" cols="70" >
+                <?php
+                    echo file_get_contents('testo.txt'); 
+                ?>
+                </textarea>
+                <input type="submit" name="submit" value="Modifica testo">
 
             </form>
 
-            <h1>Contenuto attuale</h1>
-            <?php
-                echo file_get_contents('testo.txt');
-            ?>
-        </p>
-        <p>
-            <a class="menu-link" href="index.php">
+
+            <a id="paddare" class="menu-link" href="index.php">
                 <button type="button" class="btncurrent">
                     Torna alla Home
                 </button>
