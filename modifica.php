@@ -47,7 +47,7 @@ and open the template in the editor.
             </p>
         </header>
         <p>
-           <form name="form1" method="post" action="modifica2.php">
+        <form name="form1" method="post" action="modificaTitolo.php">
             <textarea name="Nuovo" class="editabile">
             <?php
                 echo file_get_contents('titolo.txt'); 
@@ -64,7 +64,7 @@ and open the template in the editor.
         </p>
 
         <p>
-            form name="form2" method="post" action="modifica2.php">
+            <form name="form2" method="post" action="modificaTesto.php">
             <textarea name="Nuovo" class="editabile">
             <?php
                 echo file_get_contents('testo.txt'); 
