@@ -19,7 +19,7 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
 <html id="fullpage">
-    <head>
+    <head id="sparita">
         <title>C.A. Homepage</title>
         <script type="text/javascript" src="lib/jquery-1.11.3.min.js"></script>
         

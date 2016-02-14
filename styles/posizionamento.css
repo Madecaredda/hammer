@@ -29,6 +29,9 @@ and open the template in the editor.
     padding-left: 20%;
     display: inline-block;
 }
+#sparita{
+    display: inline-block;    
+}
 
 .title{
     display: inherit
