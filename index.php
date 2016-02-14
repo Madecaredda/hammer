@@ -86,7 +86,7 @@ and open the template in the editor.
                     </p>
                 <div id="fulcrohome">
                     <p id="prova"></p>
-                    <h1> Le mani degli artigiani, a Vostra disposizione </h1>
+                    <h1> <?php echo file_get_contents('titolo.txt'); ?> </h1>
                     <p class="content" id="content1">
                         <?php echo file_get_contents('testo.txt'); ?>
                     </p>

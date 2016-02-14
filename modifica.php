@@ -50,10 +50,27 @@ and open the template in the editor.
            <form name="form1" method="post" action="modifica2.php">
             <textarea name="Nuovo" class="editabile">
             <?php
+                echo file_get_contents('titolo.txt'); 
+            ?>
+            </textarea>
+            <input type="submit" name="submit" value="Modifica Titolo">
+
+            </form>
+
+            <h1>Contenuto attuale</h1>
+            <?php
+                echo file_get_contents('titolo.txt');
+            ?>
+        </p>
+
+        <p>
+            form name="form2" method="post" action="modifica2.php">
+            <textarea name="Nuovo" class="editabile">
+            <?php
                 echo file_get_contents('testo.txt'); 
             ?>
             </textarea>
-            <input type="submit" name="submit" value="Modifica">
+            <input type="submit" name="submit" value="Modifica testo">
 
             </form>
 
@@ -62,7 +79,6 @@ and open the template in the editor.
                 echo file_get_contents('testo.txt');
             ?>
         </p>
-        
 <?php }
 ?>
 
