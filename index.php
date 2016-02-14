@@ -88,7 +88,7 @@ and open the template in the editor.
                     <p id="prova"></p>
                     <h1> Le mani degli artigiani, a Vostra disposizione </h1>
                     <p class="content" id="content1">
-                        Realizzazione e montaggio di infissi interni e esterni in legno, alluminio o PVC. 
+                        <?php echo file_get_contents('testo.txt'); ?>
                     </p>
                     
                 </div>
