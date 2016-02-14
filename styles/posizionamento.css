@@ -25,6 +25,10 @@ and open the template in the editor.
     margin-right: 5%;
 }
 
+#paddare{
+    padding-left: 20%;
+}
+
 .title{
     display: inherit
 }

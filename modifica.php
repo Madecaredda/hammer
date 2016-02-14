@@ -29,7 +29,7 @@ and open the template in the editor.
         <link rel="stylesheet" type="text/css" href="styles/posizionamento.css" media="screen">
         <link rel="stylesheet" type="text/css" href="styles/dimensione.css" media="screen">
     </head>
-    <body id="body">
+    <body id="paddare">
         <header id="testata">
             <p id="username">
                 <a href="loginPage.php">
@@ -79,6 +79,16 @@ and open the template in the editor.
                 echo file_get_contents('testo.txt');
             ?>
         </p>
+        <p>
+            <a class="menu-link" href="index.php">
+                <button type="button" class="btncurrent">
+                    Torna alla Home
+                </button>
+            </a>
+        </p>
+    </body>
+</html>
+
 <?php }
 ?>
 
