@@ -27,6 +27,7 @@ and open the template in the editor.
 
 #paddare{
     padding-left: 20%;
+    display: inline-block;
 }
 
 .title{
