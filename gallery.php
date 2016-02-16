@@ -92,14 +92,14 @@ echo "Errore in connesione al database del server \n $database->connect_errno:$d
             <a href="#" id="sideBarTab" class="sideBarTabClosed"></a>
             <div id="frame">
                 <a id="previousImageLink"></a>
-                <img src="css/img/emptyX.gif" alt="" id="currentImg"/><a id="imagoNextImageLink"></a>
-                <h3 id="imagoCurrentImageTitle">The gallery is loading...</h3>
-                <div id="imagoCurrentImageLoading"></div>
-                <div id="imagoLoading"></div>
+                <img src="css/img/emptyX.gif" alt="" id="currentImg"/><a id="nextImageLink"></a>
+                <h3 id="currentImageTitle">The gallery is loading...</h3>
+                <div id="currentImageLoading"></div>
+                <div id="loading"></div>
             </div>
         
         <div class="msg">
-            <span id="imagoError">Errore nel caricamento delle immagini</span>
+            <span id="error">Errore nel caricamento delle immagini</span>
         </div>
             
             

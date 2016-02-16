@@ -48,7 +48,7 @@ var Gallery = new Class({
             if (this.images[index] != null) {
                 var img = new Element("img");
                 img.setProperty('src', this.images[index].getThumbURL());
-                img.addClass('imago_thumbImg');
+                img.addClass('thumbImg');
                 img.setProperty('alt', this.images[index].getTitle());
                 img.setProperty('id', this.images[index].getID());
                 img.onclick = this.switchImage.bind(this.images[index]);
@@ -61,7 +61,7 @@ var Gallery = new Class({
         var thumbTable = new Element("table");
         var thumbTableBody = new Element("TBODY");
         
-        thumbTable.setProperty('id', 'imagoCurrentThumbTable');
+        thumbTable.setProperty('id', 'currentThumbTable');
         var counter = this.lastThumbImageIndex;
         if (this.lastThumbImageIndex == 0) {
             ElementHelper.hide('menuPrevLink');
@@ -95,13 +95,13 @@ var Gallery = new Class({
     },
     thumbMenuNext: function(){
         if (this.images.length > this.lastThumbImageIndex) {
-            $('imagoCurrentThumbTable').dispose();
+            $('currentThumbTable').dispose();
             var table = this.getCurrentThumbTable();
             table.injectAfter('galleryTitle');
 			
 			selected = $(this.getCurrentSelection());
             if ($chk(selected)) {
-				selected.addClass('imago_selectedThumb');
+				selected.addClass('selectedThumb');
 			}
         }
     },
@@ -111,12 +111,12 @@ var Gallery = new Class({
             if (this.lastThumbImageIndex < 0) {
                 this.lastThumbImageIndex = 0;
             }
-            $('imagoCurrentThumbTable').dispose();
+            $('currentThumbTable').dispose();
             var table = this.getCurrentThumbTable();
             table.injectAfter('galleryTitle');
 			selected = $(this.getCurrentSelection());
             if ($chk(selected)) {
-				selected.addClass('imago_selectedThumb');
+				selected.addClass('selectedThumb');
 			}
         }
     },
@@ -156,12 +156,12 @@ var Gallery = new Class({
         var table = this.getCurrentThumbTable();
         table.injectAfter('galleryTitle');
         
-        if ($chk($('imagoNextImageLink'))) {
-            var nextImageLink = $('imagoNextImageLink');
+        if ($chk($('nextImageLink'))) {
+            var nextImageLink = $('nextImageLink');
             nextImageLink.setProperty('href', '#');
             nextImageLink.setProperty('accesskey', 'n');
             nextImageLink.onclick = this.nextImage.bind(this);
-            ElementHelper.hide('imagoNextImageLink');
+            ElementHelper.hide('nextImageLink');
         }
         
         if ($chk($('previousImageLink'))) {
@@ -172,7 +172,7 @@ var Gallery = new Class({
             ElementHelper.hide('previousImageLink');
         }
         ElementHelper.hide('previousImageLink');
-        ElementHelper.hide('imagoCurrentImageLoading');
+        ElementHelper.hide('currentImageLoading');
         
         document.addEvent('keydown', gallery.handleKey.bind(this));
         
@@ -197,12 +197,12 @@ var Gallery = new Class({
         }
     },
     switchImage: function(){
-        ElementHelper.show('imagoCurrentImageLoading');
-        ElementHelper.hide('imagoNextImageLink');
+        ElementHelper.show('currentImageLoading');
+        ElementHelper.hide('nextImageLink');
         ElementHelper.hide('previousImageLink');
         file = this.getImageURL();
         if ($(gallery.getCurrentSelection()) != null) {
-            $(gallery.getCurrentSelection()).removeClass('imago_selectedThumb');
+            $(gallery.getCurrentSelection()).removeClass('selectedThumb');
         }
         cimage = this;
         var myFx = new Fx.Morph('currentImg', {
@@ -231,7 +231,7 @@ var Gallery = new Class({
         $('currentImg').setProperty('alt', title);
         $('currentImg').setProperty('title', title);
         
-        ElementHelper.setInnerHTML('imagoCurrentImageTitle', title);
+        ElementHelper.setInnerHTML('currentImageTitle', title);
         if (window.opera) {
             $('currentImg').removeEvents('load');
             fireFadein = gallery.fadeIn.bind(cimage);
@@ -240,7 +240,7 @@ var Gallery = new Class({
     },
     fadeIn: function(){
         i = this.img;
-        ElementHelper.hide('imagoCurrentImageLoading');
+        ElementHelper.hide('currentImageLoading');
         $('currentImg').setStyles({
             width: i.width + 'px',
             height: i.height + 'px'
@@ -254,10 +254,10 @@ var Gallery = new Class({
             'opacity': [0, 1]
         });
         if (gallery.indexCurrentImage + 1 == gallery.images.length) {
-            ElementHelper.hide('imagoNextImageLink');
+            ElementHelper.hide('nextImageLink');
         }
         else {
-            ElementHelper.show('imagoNextImageLink');
+            ElementHelper.show('nextImageLink');
         }
         if (gallery.indexCurrentImage == 0) {
             ElementHelper.hide('previousImageLink');
@@ -269,8 +269,8 @@ var Gallery = new Class({
     applyLayoutFixes: function(){
         $('frame').setStyle('width', $('currentImg').getSize().x);
         
-        if ($chk($('imagoNextImageLink'))) {
-            $('imagoNextImageLink').setStyle('height', $('currentImg').getSize().y);
+        if ($chk($('nextImageLink'))) {
+            $('nextImageLink').setStyle('height', $('currentImg').getSize().y);
         }
         if ($chk($('previousImageLink'))) {
             $('previousImageLink').setStyle('height', $('currentImg').getSize().y);
@@ -282,7 +282,7 @@ var Gallery = new Class({
     },
     setCurrentSelection: function(selection){
         this.selection = selection;
-        $(this.selection).addClass('imago_selectedThumb');
+        $(this.selection).addClass('selectedThumb');
         for (var i = 0; i < this.images.length; i++) {
             if (this.images[i].getID() == this.selection) {
                 this.indexCurrentImage = i;
@@ -301,12 +301,12 @@ var Gallery = new Class({
         }
         new Asset.images(thumbURLs, {
             onComplete: function(){
-                ElementHelper.hide('imagoLoading');
+                ElementHelper.hide('loading');
                 gallery.images[0].img = new Image();
                 gallery.images[0].img.src = gallery.images[0].getImageURL();
                 doShowImage = gallery.showImage.bind(gallery.images[0]);
                 doShowImage();
-                window.fireEvent('imagoReady', 'yes');
+                window.fireEvent('Ready', 'yes');
                 if (gallery.prefetching == 'all') {
                     new Asset.images(imageURLs, {
                         onComplete: function(){
@@ -327,8 +327,8 @@ var GalleryLoader = new Class({
     },
     load: function(){
         try {
-            ElementHelper.show('imagoLoading');
-            ElementHelper.setOpacity('imagoLoading', 0.5);
+            ElementHelper.show('loading');
+            ElementHelper.setOpacity('loading', 0.5);
             this.specialLoading();
         } 
         catch (e) {
@@ -340,10 +340,10 @@ var GalleryLoader = new Class({
     },
     error: function(msg){
         if (gallery.debug) {
-            $('imagoErrorDebug').set('text', msg);
+            $('errorDebug').set('text', msg);
         }
-        ElementHelper.show('imagoError');
-        ElementHelper.hide('imagoLoading');
+        ElementHelper.show('error');
+        ElementHelper.hide('loading');
     },
     specialLoading: function(){
         this.albumBaseURL = "";

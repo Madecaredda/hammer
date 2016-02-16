@@ -55,7 +55,7 @@ function init(){
     });
 }
 
-window.addEvent('imagoReady', function(){
+window.addEvent('Ready', function(){
     $('sideBarContent').style.display = 'block';
     init();
 });
