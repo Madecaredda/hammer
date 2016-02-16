@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<simpleviewerGallery maxImageHeight="1024" maxImageWidth="1024" textColor="0xFFFFFF" frameColor="0xffffff" frameWidth="20" stagePadding="40" thumbnailColumns="3" thumbnailRows="3" navPosition="left" title="Le Nostre Porte" enableRightClickOpen="true" backgroundImagePath="" thumbPath="thumbnails/" imagePath="images/" >
+<simpleviewerGallery maxImageHeight="1024" maxImageWidth="1024" textColor="0xFFFFFF" frameColor="0xffffff" frameWidth="20" stagePadding="40" thumbnailColumns="3" thumbnailRows="3" navPosition="left" title="Le Nostre Creazioni" enableRightClickOpen="true" backgroundImagePath="" thumbPath="thumbnails/" imagePath="images/" >
     <image>
 
 	<filename>p1.jpg</filename>

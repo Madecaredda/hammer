@@ -28,7 +28,7 @@ echo "Errore in connesione al database del server \n $database->connect_errno:$d
         </script>
         <script src="gallery/js/slider.js" type="text/javascript">
         </script>
-        <script src="gallery/js/imago-nc.js" type="text/javascript">
+        <script src="gallery/js/nc.js" type="text/javascript">
         </script>
         <script type="text/javascript">
 
@@ -85,14 +85,14 @@ echo "Errore in connesione al database del server \n $database->connect_errno:$d
         </nav>
         <p id="divisor">  </p>
     
-        <h3 id="imagoGalleryTitle"></h3>
+        <h3 id="galleryTitle"></h3>
         
-            <a id="imagoMenuPrevLink"><img src="styles/img/menuPrevImg.png" alt=""/></a>
-            <a id="imagoMenuNextLink"><img src="styles/img/menuNextImg.png" alt=""/></a>
+            <a id="menuPrevLink"><img src="styles/img/menuPrevImg.png" alt=""/></a>
+            <a id="menuNextLink"><img src="styles/img/menuNextImg.png" alt=""/></a>
             <a href="#" id="sideBarTab" class="sideBarTabClosed"></a>
-            <div id="imagoFrame">
-                <a id="imagoPreviousImageLink"></a>
-                <img src="css/img/emptyX.gif" alt="" id="imagoCurrentImg"/><a id="imagoNextImageLink"></a>
+            <div id="frame">
+                <a id="previousImageLink"></a>
+                <img src="css/img/emptyX.gif" alt="" id="currentImg"/><a id="imagoNextImageLink"></a>
                 <h3 id="imagoCurrentImageTitle">The gallery is loading...</h3>
                 <div id="imagoCurrentImageLoading"></div>
                 <div id="imagoLoading"></div>

@@ -61,7 +61,7 @@ ul {
     float: left;
 }
 
-#imagoGalleryTitle {
+#galleryTitle {
     margin: 0px;
     text-align: center;
     font-size: x-large;
@@ -93,7 +93,7 @@ ul {
 
 
 /*immaginecorrente*/
-#imagoFrame {
+#frame {
     position: fixed;
     top: 260px;
     left: 39%;
@@ -101,7 +101,7 @@ ul {
     z-index: 0;
 }
 
-#imagoCurrentImg {
+#currentImg {
     visibility: hidden;
 }
 
@@ -115,7 +115,7 @@ ul {
    
 }
 
-#imagoNextImageLink, #imagoPreviousImageLink {
+#imagoNextImageLink, #previousImageLink {
     position: absolute;
     height: 100%;
     width: 50px;
@@ -135,16 +135,16 @@ ul {
     top: 0px;
 }
 
-#imagoPreviousImageLink {
+#previousImageLink {
     left: 10px;
     top: 0px;
 }
 
-#imagoPreviousImageLink:hover {
+#previousImageLink:hover {
     background: url('img/prevImg.png') no-repeat center center;
 }
 
-#imagoMenuPrevLink, #imagoMenuNextLink {
+#menuPrevLink, #menuNextLink {
     margin: 15px;
     cursor: pointer;
 }

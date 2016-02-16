@@ -1,11 +1,4 @@
-/*
- *  Copyright 2009 by Jens Boje
- *  Name    : Simple sidebar
- *  Version : 0.1pre
- *  Author  : Jens Boje (azarai@codeboje.de)
- *  URL		: http://codeboje.de
- *  Terms of Use:  BSD
- */
+
 var isExtended = 0;
 var height = 450;
 var width = 0;
